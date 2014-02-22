@@ -1,0 +1,9 @@
+<div class='well top'>
+  <h3>Welcome, <%= session[:player_name] %> </h3>
+    <p>You have $<%= @amount %> to start the game with.</p>
+    <p>How much would you like to bet?<p>
+  <form action='/player_bet' method='post'>
+    <input type='integer' name='player_bet' placeholder='Type an amount here'></input>
+    <input type='submit' class='btn btn-primary' value='Proceed?'>
+  </form>
+</div>
