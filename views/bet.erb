@@ -1,6 +1,10 @@
 <div class='well top'>
+  <% if @new_player %>
   <h3>Welcome, <%= session[:player_name] %> </h3>
-    <p>You have $<%= @amount %> to start the game with.</p>
+    <p>You have $<%= session[:player_pot] %> to start the game with.</p>
+    <% else %>
+    <p>You currently have $<%= session[:player_pot] %> in your balance.</p>
+    <% end %>
     <p>How much would you like to bet?<p>
   <form action='/player_bet' method='post'>
     <input type='integer' name='player_bet' placeholder='Type an amount here'></input>

@@ -32,3 +32,11 @@ div.card_display {
 .center {
   text-align: center;
 }
+
+form#first-form {
+  margin-bottom: 10px;
+}
+
+#player_hit_or_stay {
+  padding: 50px;
+}
